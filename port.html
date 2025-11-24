@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="styless.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script src="https://unpkg.com/typed.js@2.0.15/dist/typed.umd.js"></script>
+</head>
+<body>
+<div id="header">
+    <div class="container">
+         <nav>
+            <img src="gambar3.jpeg" class="logo">
+            <ul id="sidemenu">
+                <li><a href="#header">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+            </ul>
+            <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+         </nav>
+        <section class="home">
+            <div class="home-content">
+            <h1>Hello, It's Me</h1>
+            <h2><span>Muhammad Adian Ramadhan</span></h2>
+            <h3>And I'm a <span class="text"></span></h3>
+            </div>
+        </section>
+        <script src="main.js"></script>
+    </div> 
+</div>
+<!-- -----------about----------------->
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="gambar4.jpeg">
+            </div>
+            <div class="about-col-2">
+                <h1 class="sub-title">About Me</h1>
+                <p>A Network Engineering (TRKJ) student with multidisciplinary competence. I combine expertise in network infrastructure management (MikroTik/Cisco) with a strong foundation in Electricity and Automation. Actively leveraging Artificial Intelligence (AI) to enhance efficiency and innovation in every technical solution.</p>
+                
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                    <p class="tab-links"onclick="opentab('experience')">Experience</p>
+                    <p class="tab-links"onclick="opentab('education')">Education</p>
+                </div>
+                <div class="tab-contents active-tab" id="skills">
+                    <ul><h3>Soft Skill</h3>
+                    <ul class="skill-grid">
+                        <li>Communication</li>
+                        <li>Teamwork</li>
+                        <li>Adaptability</li>
+                        <li>Time Management</li>
+                        <li>Problem Solving</li>
+                        <li>Creativity</li>
+                    </ul>
+                    <br>
+                        <h3>Hard Skill</h3>
+                    <ul class="hard-skill-list">
+                        <li>
+                             <span class="judul-skill">Network Engineering (MikroTik & Cisco)</span>
+                             <p class="isi-skill">
+                                <strong>Routing & Switching:</strong> OSPF, BGP, VLAN, Cisco IOS.
+<br>
+                                <strong>Security & VPN:</strong> Firewall Filter, NAT, L2TP/IPsec, GRE.
+<br>
+                                <strong>Management:</strong> Bandwidth Queue, Hotspot, User Manager.
+                            </p>
+                        </li>
+                        <li>
+                            <span class="judul-skill">Digital & AI Tools</span>
+                            <p class="isi-skill">
+                               <strong>Tools:</strong> Canva, Clip Studio, Generative AI Prompts.
+                            </p>
+                        </li>
+                        <li>
+                            <span class="judul-skill"> Electrical & Automation</span>
+                            <p class="isi-skill">
+                               <strong>Panel:</strong> LVMDP Assembly, 3-Phase Wiring.
+<br>
+                                <strong>Control:</strong> PLC Programming, Electro Motor Maintenance. 
+                            </p>
+                        </li>
+                    </ul>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="experience">
+                    <ul>
+                        <li><span class="judul-skill">2025 - Current</span><p class="isi-skill">Frayui | Freelancer</p></li>
+                        <li><span class="judul-skill">2025 (1 Week)</span><p class="isi-skill">Polytechnic IDN | Assistant Mentor | Bootcamp</p></li>
+                        <li><span class="judul-skill">2024 (1 Week)</span><p class="isi-skill">Operator Komputer Madya VSGA | BPSDMP Surabaya | Bootcamp</p></li>
+                        <li><span class="judul-skill">January 2023 - May 2023</span><p class="isi-skill">PT. Sinergi Gula Nusantara (SGN) | Technician | Intern</p></li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="education">
+                    <ul>
+                        <li><span class="judul-skill">July 2025 - Current</span><p class="isi-skill">Polytechnic IDN | Computer Network Engineering</p></li>
+                        <li><span class="judul-skill">July 2021 - May 2024</span><p class="isi-skill">PGRI 1 SDA | Vocational School Electrical Power Installation Engineering</p></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- -------------------services-------------------->
+<div id="services">
+    <div class="container">
+        <h1 class="sub-title">My Services</h1>
+        <div class="services-list">
+            <div>
+                <i class="fa-solid fa-server" style="color: #FFD43B;"></i>
+                <h2 class="isi-sub">Network Infrastructure</h2>
+                <p>Designing secure and stable network infrastructures using MikroTik & Cisco. From VPN tunneling to bandwidth management.</p>
+                    <div class="service-detail">
+                    <p><strong>Key Competencies:</strong></p>
+                    <ul>
+                        <li><strong>Network Design:</strong> Routing & Switching topology design (OSPF, BGP, VLAN).</li>
+                        <li><strong>Security & Firewall:</strong> Hardening networks against threats (Filter Rules, NAT, Mangle).</li>
+                        <li><strong>Bandwidth Management:</strong> QoSm Queue Tree, and Hotspot Management for optimized traffic.</li>
+                        <li><strong>Remote Access:</strong> Secure VPN implementation (L2TP/IPsec, OpenVPN, WireGuard).</li>
+                    </ul>
+                </div>
+                <a href="#" onclick="toggleService(event)">Learn more</a>
+            </div>
+           <div>
+                <i class="fa-sharp fa-solid fa-bolt" style="color: #FFD43B;"></i>
+                <h2 class="isi-sub">Industrial Automation</h2>
+                <p>Delivering precise electrical installation and automation logic control to ensure operational efficiency and safety.</p>
+                
+                <div class="service-detail">
+                    <p><strong>Key Competencies:</strong></p>
+                    <ul>
+                        <li><strong>Panel Assembly:</strong> LVMDP (Low Voltage Main Distribution Panel) & Control Panel wiring.</li>
+                        <li><strong>PLC Programming:</strong> Logic design and implementation for automated systems (Omron/Siemens).</li>
+                        <li><strong>Motor Control:</strong> Star-Delta, DOL, and VFD (Variable Frequency Drive) installation.</li>
+                        <li><strong>Maintenance:</strong> Troubleshooting electro-pneumatic systems and industrial circuits.</li>
+                    </ul>
+                </div>
+
+                <a href="#" onclick="toggleService(event)">Learn more</a>
+            </div>
+
+            <div>
+                <i class="fa-brands fa-uikit" style="color: #FFD43B;"></i>
+                <h2 class="isi-sub">Digital Optimization</h2>
+                <p>Enhancing workflow productivity and visual communication through cutting-edge Generative AI tools and design.</p>
+                
+                <div class="service-detail">
+                    <p><strong>Key Competencies:</strong></p>
+                    <ul>
+                        <li><strong>AI Prompt Engineering:</strong> Utilizing ChatGPT/Midjourney for efficient problem solving & content generation.</li>
+                        <li><strong>Visual Communication:</strong> Professional presentation decks and layout design using Canva.</li>
+                        <li><strong>Digital Branding:</strong> Creating cohesive visual identities for digital platforms.</li>
+                        <li><strong>Tech Integration:</strong> Streamlining daily workflows using modern digital tools.</li>
+                    </ul>
+                </div>
+
+                <a href="#" onclick="toggleService(event)">Learn more</a>
+            </div>
+
+        </div>
+    </div>
+</div>
+<!-- -------------portfolio---------------- -->
+<div id="portfolio">
+    <div class="container">
+        <h1 class="sub-title">My Work & Intern</h1>
+        <div class="work-list">
+
+            <div class="work">
+                <img src="gambar5.png">
+                <div class="layer">
+                    <h3>Advanced Network Infrastructure Design & Simulation</h3>
+                    <p>Implementation of Complex Routing Protocols (OSPF Multi-Area) and Switching Technologies (VLAN/VTP) using Cisco Packet Tracer & GNS3.</p>
+                </div>
+            </div>
+             <div class="work">
+                <img src="gambar6.png">
+                <div class="layer">
+                <h3>Industrial Electrical & Automation Systems</h3>
+                <p>Hands-on experience in PLC Programming (Electro-Pneumatic) and 3-Phase Control Panel Assembly.</p>
+                </div>
+            </div>
+             <div class="work">
+                <img src="gambar7.png">
+                <div class="layer">
+                <h3>Creative Design & AI Visualization</h3>
+                <p>Self-taught proficiency in Generative AI Prompting, Digital Branding, and Layouting using Canva.</p>
+                </div>
+            </div>
+            
+            <div class="work hidden-item portfolio-hidden">
+                <img src="gabung2.png" alt="Portfolio Tambahan 1"> <div class="layer"><h3>Project Superlab Simulation</h3><p>Enterprise Topology Simulation (OSPF, Routing, VLAN, Firewall)</p><a href="#"><i class="fas fa-external-link-alt"></i></a></div>
+            <a href="#"><i class="fas fa-external-link-alt"></i></a>
+            </div>
+            <div class="work hidden-item portfolio-hidden">
+                <img src="gabung3.png" alt="Portfolio Tambahan 2"> <div class="layer"><h3>Industrial Electrical Systems</h3><p>LVMDP Panel Assembly & PLC Automation</p><a href="#"><i class="fas fa-external-link-alt"></i></a></div>
+            <a href="#"><i class="fas fa-external-link-alt"></i></a>
+            </div>
+             <div class="work hidden-item portfolio-hidden">
+                <img src="gabung1.png" alt="Portfolio Tambahan 3"> <div class="layer"><h3>Digital Branding & AI</h3><p>Generative AI Prompting & Visual Layout</p><a href="#"><i class="fas fa-external-link-alt"></i></a></div>
+            <a href="#"><i class="fas fa-external-link-alt"></i></a>
+            </div>
+
+        </div>
+        <a href="#" class="btn" id="see-more-portfolio-btn">See more</a>
+    </div>
+    </div>
+</div>
+<!-- ----------sertifikat---------- -->
+
+<div id="sertifikat">
+    <div class="container">
+        <h1 class="sub-title">Sertifikat</h1>
+        
+        <div class="work-list">
+            
+            <div class="work">
+                <img src="gambar8sertifikat.jpeg" alt="Sertifikat 1">
+            </div>
+            <div class="work">
+                <img src="IT2.jpeg" alt="Sertifikat 2"> 
+            </div>
+            <div class="work">
+                <img src="IT3.jpeg" alt="Sertifikat 3">
+            </div>
+
+            <div class="work hidden-item cert-hidden">
+                <img src="IT1.jpeg" alt="Sertifikat 4">
+            </div>
+            <div class="work hidden-item cert-hidden">
+                <img src="IT4.jpeg" alt="Sertifikat 5"> 
+            </div>
+            <div class="work hidden-item cert-hidden">
+                <img src="IT5.jpeg" alt="Sertifikat 6"> 
+            </div>
+            <div class="work hidden-item cert-hidden">
+                <img src="LS1.jpeg" alt="Sertifikat 6"> 
+            </div>
+            <div class="work hidden-item cert-hidden">
+                <img src="LS3.jpeg" alt="Sertifikat 6"> 
+            </div>
+            <div class="work hidden-item cert-hidden">
+                <img src="LS2.jpeg" alt="Sertifikat 6"> 
+            </div>
+            
+        </div>
+        <a href="#" class="btn" id="see-more-cert-btn">See more</a>
+    </div>
+</div>
+
+
+
+<!-- ---------contact---------- -->
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact Me</h1>
+                <p><i class="fa-solid fa-envelope"></i>bangadianr@gmail.com</p>
+                <p><i class="fa-solid fa-square-phone"></i>+62 877-6849-3870</p>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/share/1Bk6voJaW7/"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="https://www.instagram.com/masadianr?igsh=MXRmaXg4bGxuZWI5YQ=="><i class="fa-brands fa-x-twitter"></i></a>
+                    <a href="https://www.instagram.com/masadianr?igsh=MXRmaXg4bGxuZWI5YQ=="><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com/in/adianr?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><i class="fa-brands fa-linkedin"></i></a>
+                </div>
+                <a href="gambar9CV.pdf" download class="btn btn2">Download CV</a>
+            </div>
+            <div class="contact-right">
+                <form name="submit-to-google-sheet">
+                    <input type="text" name="Name" placeholder="Your Name" required>
+                    <input type="email" name="Email" placeholder="Your Email" required>
+                    <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                    <button type="submit" class="btn btn2">Submit</button>
+                </form>
+                <span id="msg"></span>
+            </div>
+        </div>
+    </div>
+    <div class="copyright">
+        <p><i class="fa-regular fa-copyright"></i> Copyright © Frayui.  <i class="fa-solid fa-pen"></i></i>  Made with by Altair</p>
+    </div>
+</div>
+
+<script>
+
+var tablinks = document.getElementsByClassName("tab-links");
+var tabcontents = document.getElementsByClassName("tab-contents");
+function opentab(tabname){
+    for(tablink of tablinks){
+        tablink.classList.remove("active-link")
+    }
+    for(tabcontent of tabcontents){
+        tabcontent.classList.remove("active-tab")
+    }
+    event.currentTarget.classList.add("active-link");
+    document.getElementById(tabname).classList.add("active-tab");
+}
+
+</script>
+
+<script>
+
+    var sidemenu = document.getElementById("sidemenu");
+
+    function openmenu(){
+        sidemenu.style.right = "0";
+    }
+     function closemenu(){
+        sidemenu.style.right = "-150px";
+    }
+
+</script>
+<script>
+  const scriptURL = 'https://script.google.com/macros/s/AKfycbyBlMc73kYdqAJNjsBco1EPlfzsvnQ-CgRyHPvl54IeY1L6z6IsRra7wJyuiRImqg/exec'
+  const form = document.forms['submit-to-google-sheet']
+  const msg = document.getElementById("msg")
+  form.addEventListener('submit', e => {
+    e.preventDefault()
+    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+      .then(response => {
+        msg.innerHTML = "Message Sent Succeccfully"
+        setTimeout(function(){
+            msg.innerHTML = ""
+        },5000)
+        form.reset()
+    })
+      .catch(error => console.error('Error!', error.message))
+  })
+</script>
+<script>
+var typed= new Typed(".text",{
+    strings: ["Network Engineer" , "Electrical Technician" , "AI Enthusiast"],
+    typeSpeed: 50,
+    backSpeed: 30,
+    backDelay: 1500,
+    loop:true
+})
+</script>
+
+<script>
+    const btnPortfolio = document.getElementById('see-more-portfolio-btn');
+    const hiddenPortfolioItems = document.querySelectorAll('.portfolio-hidden');
+    let isPortfolioExpanded = false; // Status awal: tertutup
+
+    btnPortfolio.addEventListener('click', function(e) {
+        e.preventDefault(); // Cegah loncat
+
+        if (!isPortfolioExpanded) {
+            // KALAU TERTUTUP -> BUKA
+            hiddenPortfolioItems.forEach(item => item.style.display = 'block');
+            btnPortfolio.innerText = "Show less"; // Ubah tulisan tombol
+            isPortfolioExpanded = true;
+        } else {
+            // KALAU TERBUKA -> TUTUP
+            hiddenPortfolioItems.forEach(item => item.style.display = 'none');
+            btnPortfolio.innerText = "See more"; // Ubah tulisan tombol balik
+            isPortfolioExpanded = false;
+            // Opsional: Scroll balik ke judul Portfolio biar rapi
+            document.getElementById('portfolio').scrollIntoView({behavior: 'smooth'});
+        }
+    });
+</script>
+
+<script>
+    const btnCert = document.getElementById('see-more-cert-btn');
+    const hiddenCertItems = document.querySelectorAll('.cert-hidden');
+    let isCertExpanded = false; // Status awal: tertutup
+
+    btnCert.addEventListener('click', function(e) {
+        e.preventDefault(); // Cegah loncat
+
+        if (!isCertExpanded) {
+            // KALAU TERTUTUP -> BUKA
+            hiddenCertItems.forEach(item => item.style.display = 'block');
+            btnCert.innerText = "Show less"; // Ubah tulisan tombol
+            isCertExpanded = true;
+        } else {
+            // KALAU TERBUKA -> TUTUP
+            hiddenCertItems.forEach(item => item.style.display = 'none');
+            btnCert.innerText = "See more"; // Ubah tulisan tombol balik
+            isCertExpanded = false;
+            // Opsional: Scroll balik ke judul Sertifikat biar rapi
+            document.getElementById('sertifikat').scrollIntoView({behavior: 'smooth'});
+        }
+    });
+</script>
+
+<script>
+    function toggleService(event) {
+        event.preventDefault(); // Mencegah layar loncat ke atas
+        
+        // 1. Ambil tombol yang diklik
+        const btn = event.target;
+        
+        // 2. Cari elemen 'service-detail' yang ada SEBELUM tombol ini
+        // (previousElementSibling artinya elemen tepat di atasnya)
+        const detail = btn.previousElementSibling;
+
+        // 3. Cek statusnya: Sedang muncul atau sembunyi?
+        if (detail.style.display === "block") {
+            // Kalau sedang muncul -> SEMBUNYIKAN
+            detail.style.display = "none";
+            btn.innerText = "Learn more"; // Balikin tulisan tombol
+        } else {
+            // Kalau sedang sembunyi -> MUNCULKAN
+            detail.style.display = "block";
+            btn.innerText = "Show less"; // Ubah tulisan tombol
+        }
+    }
+</script>
+
+</body>
+</html> 

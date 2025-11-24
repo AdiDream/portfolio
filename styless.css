@@ -1,0 +1,622 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    background: #080808;
+    color: #fff;
+}
+#header{
+    width: 100%;
+    height: 100vh;
+    background-image: url(gambar1.jpeg);
+    background-size: cover;
+    background-position: center;
+}
+.container{
+    padding: 10px 10%;
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.logo{
+    width: 140px;
+}
+
+nav ul li {
+    display: inline-block;
+    list-style: none;
+    margin: 10px 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    position: relative;
+}
+nav ul li a::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #ff004f;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.5s;
+}
+nav ul li a:hover::after{
+    width: 100%;
+}
+.home-content{
+    margin-top: 20%;
+    font-size: 30px;
+}
+.home-content h1{
+    font-size: 35px;
+    margin-top: 20px;
+}
+.home-content h2 span{
+    font-size: 30px;
+    margin-top: 20px;
+    color: #ff0000;
+}
+.home-content h3{
+    font-size: 20px;
+    margin-top: 20px;
+}
+.home-content h3 span{
+    color: #ff0000;
+}
+/* ------------about---------- */
+#about{
+    padding: 80px 0;
+    color: #ababab;
+}
+.row{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.about-col-1{
+    flex-basis: 35%;
+}
+.about-col-1 img{
+    width: 100%;
+    border-radius: 15px;
+}
+.about-col-2{
+    flex-basis: 60%;
+    line-height: 1.5;   /* Jarak antar baris tulisan agar enak dibaca */
+    text-align: justify;
+}
+.sub-title{
+    font-size: 60px;
+    font-weight: 600;
+    color: #fff;
+    margin-bottom: 10px;
+}
+.tab-titles{
+    display: flex;
+    margin: 20px 0 40px;
+}
+.tab-links{
+    margin-right: 100px;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+}
+.tab-links::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #ff0000;
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    transition: 0.5s;
+}
+
+.tab-links.active-link::after{
+    width: 50%;
+}
+.tab-contents ul li{
+    list-style: none;
+    margin: 10px 0;
+    font-size: 13px;
+    
+}
+.tab-contents ul li span{
+    color: #b54769;
+    font-size: 14px;
+    padding-left: 20px;
+}
+.tab-contents{
+    display: none;   
+}
+.tab-contents.active-tab{
+    display: block;
+}
+.tab-contents h3 {
+    margin-bottom: 15px; /* Kasih jarak ke bawah biar gak mepet sama list */
+    color: #fff;         /* Pastikan warnanya kontras */
+    font-size: 20px;     
+    margin-top: 20px;    /* Jarak dari elemen atasnya */
+}
+.soft-skill-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Membagi menjadi 2 kolom (kiri & kanan) */
+    gap: 10px 20px; /* Jarak antar baris (10px) dan antar kolom (20px) */
+    margin-bottom: 20px;
+}
+
+.skill-item {
+    /* Opsional: Styling untuk teks agar lebih rapi */
+    font-size: 16px;
+    color: #fff; /* Sesuaikan dengan warna teks websitemu */
+    padding-left: 20px;
+}
+
+.skill-grid {
+    display: grid;
+    grid-template-columns: max-content max-content; 
+    gap: 5px 80px;
+    
+    /* 1. Matikan list-style bawaan yang error karena Grid */
+    list-style: none !important; 
+    padding-left: 0;
+    
+    /* Warna Teks (Pink) */
+    color: #b54769; 
+    margin-left: 20px;
+}
+
+.skill-grid li {
+    font-size: 14px !important;
+    font-weight: bold;
+    
+    /* 2. Gunakan Flexbox agar titik dan tulisan sejajar rapi */
+    display: flex; 
+    align-items: center; 
+}
+
+/* 3. KITA BUAT TITIK MANUAL DISINI */
+.skill-grid li::before {
+    content: "•";       /* Ini karakter titik bulat */
+    color: white;       /* Warna titik jadi PUTIH */
+    font-size: 15px;    /* Ukuran titik (bisa diperbesar/kecil) */
+    margin-right: 10px; /* Jarak antara titik dan tulisan */
+    line-height: 1;     /* Biar titik pas di tengah vertikal */
+}
+
+.hard-skill-list {
+    list-style-type: none; /* Hilangkan titik bullet */
+    padding: 0;
+    text-align: left; /* Pastikan teks rata kiri dulu */
+}
+
+.hard-skill-list li {
+    margin-bottom: 20px; /* Jarak antar skill (misal jarak Mikrotik ke Cisco) */
+}
+
+.judul-skill {
+    color: #b54769; /* Warna Pink/Merah sesuai gambar kamu */
+    font-weight: bold;
+    font-size: 18px;
+    display: block; /* Memastikan judul punya baris sendiri */
+    margin-bottom: 10px; /* Jarak sedikit antara judul dan isi */
+}
+
+.isi-skill {
+    margin: 0; /* Reset margin bawaan */
+    
+    /* INI RAHASIANYA AGAR MENJOROK: */
+    margin-left: 35px;  /* Geser teks ke kanan sejauh 30px */
+    line-height: 1.8;   /* Jarak antar baris tulisan agar enak dibaca */
+    text-align: justify; /* Opsional: Agar rata kiri-kanan rapi seperti buku */
+}
+
+/* -----------------services----------------- */
+#services{
+    padding: 30px 0;
+}
+.services-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+    align-items: flex-start;
+}
+.services-list div{
+    background: #262626;
+    padding: 40px;
+    font-size: 13px;
+    font-weight: 300;
+    border-radius: 10px;
+    transition: background 0.5s, transform 0.5s;
+    line-height: 1.5;
+}
+.services-list div i {
+    font-size: 50px;
+    margin-bottom: 30px;
+}
+.services-list div h2{
+    font-size: 23px;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+.services-list div a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 12px;
+    margin-top: 20px;
+    display: inline-block;
+}
+.services-list div:hover{
+    background: #ff004f;
+    transform: translateY(-10px);
+}
+
+/* --- CSS UNTUK SERVICES LEARN MORE --- */
+
+/* Sembunyikan detail secara default */
+.service-detail {
+    display: none; /* Wajib hidden dulu */
+    margin-top: 15px;
+    padding-top: 15px;
+    border-top: 1px solid #444; /* Garis pemisah tipis */
+    text-align: left;
+    /* --- INI PERBAIKANNYA --- */
+    background: transparent !important; /* Memaksa background jadi bening/menyatu */
+    border: none !important;            /* Menghilangkan garis pemisah atas */
+    box-shadow: none !important;
+}
+
+/* Styling untuk list di dalam detail biar rapi */
+.service-detail ul {
+    list-style: none;
+    margin-top: 10px;
+    padding: 0;
+}
+
+.service-detail ul li {
+    position: relative;
+    padding-left: 15px;
+    margin-bottom: 5px;
+    font-size: 13px;
+    color: #ccc;
+}
+
+/* Kasih titik (bullet) manual biar keren */
+.service-detail ul li::before {
+    content: "•";
+    color: #ff004f; /* Warna Pink */
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.service-detail p strong {
+    color: #fff;
+    font-size: 14px;
+}
+
+.isi-sub{
+    margin-bottom: 7px;
+}
+/* --------portfolio-------- */
+#portfolio{
+    padding: 50px 0; 
+}
+.work-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+}
+.work{
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+}
+.work img{
+    width: 100%;
+    border-radius: 10px;
+    display: block;
+    transition: transfrom 0.5s;
+}
+.layer{
+    width: 100%;
+    height: 0;
+    background: linear-gradient(rgba(0,0,0,0.6), #ff004f);
+    border-radius: 10px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 40px;
+    text-align: center;
+    font-size: 12px;
+    transition: height 0.5s;
+}
+.layer h3{
+    font-weight: bold;
+    margin-bottom: 20px;
+    font-size: 16px;
+}
+.layer a{
+    margin-top: 20px;
+    color: #ff004f;
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 60px;
+    background: #fff;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    text-align: center;
+}
+.work:hover img{
+    transform: scale(1.1);
+}
+.work:hover .layer{
+    height: 100%;
+}
+.btn{
+    display: block;
+    margin: 50px auto;
+    width: fit-content;
+    border: 1px solid #ff004f;
+    padding: 14px 50px;
+    border-radius: 6px;
+    text-decoration: none;
+    color: #fff;
+    transition: background 0.5s;
+}
+.btn:hover{
+    background: #ff004f;
+}
+/* ------------sertifikat-------------- */
+#portfolio .work-list, 
+#sertifikat .work-list {
+    display: grid;
+    /* KUNCI: Paksa jadi 3 kolom yang sama besar */
+    grid-template-columns: repeat(3, 1fr); 
+    grid-gap: 40px;
+    margin-top: 50px;
+    width: 100%;
+}
+
+.hidden-item{
+    display: none;
+}
+
+#sertifikat{
+    padding-top: 0px;
+    margin-top: -50px; /* Tetap naik sedikit biar rapi */
+}
+.work-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+}
+.work{
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+    max-width: 400px; /* Angka ini bisa kamu ubah (misal 300px atau 500px) */
+    width: 100%;      /* Agar tetap responsif di HP */
+    margin: 0 auto;   /* Agar posisinya di tengah (opsional) */
+}
+.work img{
+    width: 100%;
+    display: block;
+    object-fit: cover; /* Biar gambar gak gepeng kalau ukurannya beda-beda */
+    border-radius: 10px;
+}
+.work:hover img{
+    transform: scale(1.1);
+}
+.work:hover .layer{
+    height: 100%;
+}
+/* --- PENTING: RESPONSIF HP --- */
+/* Kalau di HP (layar kecil), jangan dipaksa 3, nanti kekecilan. Balikin ke 1 kolom */
+@media only screen and (max-width: 600px) {
+    #sertifikat .work-list, 
+    #portfolio .work-list {
+        grid-template-columns: repeat(1, 1fr); /* Di HP jadi 1 kolom */
+        gap: 30px;
+    }
+}
+
+/* -----------contact-------------- */
+#contact{
+    padding-top: 80px;
+}
+.contact-left{
+    flex-basis: 35%;
+}
+.contact-right{
+    flex-basis: 60%;
+}
+.contact-left p{
+    margin-top: 30px;
+}
+.contact-left p i{
+    color: #ff004f;
+    margin-right: 15px;
+    font-size: 25px;
+}
+.social-icons{
+    margin-top: 30px;
+}
+.social-icons a{
+    text-decoration: none;
+    font-size: 30px;
+    margin-right: 15px;
+    color: #ababab;
+    display: inline-block;
+    transition: transform;
+}
+.social-icons a:hover{
+    color: #ff004f;
+    transform: translateY(-2px);
+}
+.btn.btn2{
+    display: inline-block;
+    background: #ff004f;
+}
+.btn:hover, .btn2:hover {
+    background: #cc003f; /* Warna Pinknya jadi lebih gelap */
+    box-shadow: inset 0 0 10px rgba(0,0,0,0.5); /* Bayangan di dalam (Inner Shadow) */
+    cursor: pointer;
+}
+.btn:active, .btn2:active {
+    transform: scale(0.95); /* Tombol mengecil dikit (efek ditekan masuk) */
+    box-shadow: inset 0 0 20px rgba(0,0,0,0.8); /* Bayangan dalam makin gelap */
+    transition: 0.1s; /* Geraknya cepat biar terasa responsif */
+}
+.contact-right form{
+    width: 100%;
+}
+form input, form textarea{
+    width: 100%;
+    border: 0;
+    outline: none;
+    background: #262626;
+    padding: 15px;
+    margin: 15px 0;
+    color: #fff;
+    font-size: 16px;
+    border-radius: 6px;
+}
+form .btn2{
+    padding: 14px 60px;
+    font-size: 18px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+.copyright{
+    width: 100%;
+    text-align: center;
+    padding: 25px 0;
+    background: #262626;
+    font-weight: 300;
+    margin-top: 20px;
+}
+.copyright i{
+    color: #ff004f;
+}
+/* --- Tambahan untuk fitur See More Sertifikat --- */
+
+/* Menyembunyikan sertifikat tambahan secara default */
+#sertifikat .hidden-cert {
+    display: none;
+}
+
+/* Opsional: Memberi sedikit jarak antara work-list dan tombol see more */
+#cert-list {
+    margin-bottom: 30px;
+}
+/* ----------css for small screens--------- */
+nav .fa-solid{
+    display: none;
+}
+@media only screen and (max-width: 600px){
+    #header{
+        background-image: url(gambar21.png);
+        background-size: cover;       /* Gambar memenuhi layar */
+        background-position: center;  /* Gambar fokus di tengah */
+        background-repeat: no-repeat;
+        /* PENTING: Paksa header setinggi layar HP */
+        height: 100vh; 
+        width: 100%;
+        position: relative; /* Menjadi 'kandang' agar teks tidak lari keluar header */
+    }
+
+    .home-content {
+        /* Hapus margin-top yang lama! */
+        margin-top: 0; 
+        
+        /* KUNCI RAHASIANYA DI SINI */
+        position: absolute;  /* Mode bebas */
+        bottom: 8%; /* Selalu berjarak 5% dari paling BAWAH layar */
+        left: 0;
+        width: 100%;         /* Lebar penuh agar bisa rata tengah */
+        text-align: left;
+        padding-bottom: 20px; /* Jaga-jaga biar ga terlalu mepet bezel bawah */
+        padding-left: 10%;
+    }
+    .home-content h1{
+        font-size: 30px
+    }
+    nav .fa-solid{
+        display: block;
+        font-size: 25px;
+    }
+    nav ul{
+        background: #ff004f;
+        position: fixed;
+        top: 0;
+        right: -150px;
+        width: 150px;
+        height: 100vh;
+        padding-top: 50px;
+        z-index: 2;
+        transition: right 0.5s;
+    }
+    nav ul li{
+        display: block;
+        margin: 25px;
+    }
+    nav ul .fa-solid{
+        position: absolute;
+        top: 25px;
+        left: 25px;
+        cursor: pointer;
+    }
+    .sub-title{
+        font-size: 40px;
+    }
+    .about-col-1, .about-col-2{
+        flex-basis: 100%;
+    }
+    .about-col-1{
+        margin-bottom: 30px;
+    }
+    .about-col-2{
+        font-size: 14px;
+    }
+    .tab-links{
+        font-size: 16px;
+        margin-right: 20px;
+    }
+    .contact-left, .contact-right{
+        flex-basis: 100%;
+    }
+    .copyright{
+        font-size: 14px;
+    }
+}
+#msg{
+    color: #61b752;
+    margin-top: -40px;
+    display: block;
+}

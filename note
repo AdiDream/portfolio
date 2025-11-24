@@ -1,0 +1,38 @@
+Isi Deskripsi (Body Text):
+
+<!-- CISCO -->
+
+"This portfolio showcase represents my Superlab Project, where I designed and simulated an enterprise-grade network topology. The objective was to create a scalable and secure network architecture mimicking real-world ISP conditions.
+
+Key Technical Implementations:
+
+- Dynamic Routing: Configured OSPF Multi-Area (Backbone, Area 1, Area 2) to optimize routing tables and traffic flow.
+
+- Advanced Switching: Implemented VLAN Segmentation, VTP (VLAN Trunking Protocol), and Inter-VLAN Routing to isolate department traffic.
+
+- Network Scalability: Designed a topology capable of handling multiple subnets and interconnecting various router brands (MikroTik & Cisco Integration)."
+
+
+<!-- Lsitrik -->
+
+"A compilation of my technical projects during vocational study and professional internship. This portfolio highlights my capability in Physical Infrastructure:
+
+Panel Assembly: Wiring and troubleshooting LVMDP/SDP panels and Motor Control Centers (Star-Delta/DOL).
+
+Automation: Designing logic for Electro-Pneumatic systems using PLC (Programmable Logic Controller).
+
+Maintenance: Diagnosing electrical faults and ensuring safety compliance in industrial environments."
+
+
+
+
+
+<!-- AI -->
+
+"Beyond technical engineering, I explore digital creativity to communicate ideas visually. This portfolio demonstrates my self-taught journey in integrating Artificial Intelligence (AI) into design workflows.
+
+Branding & Commercial: Creating logos and product mockups (like the 'Altair' bottle) using advanced prompt engineering.
+
+Visual Communication: Designing clear and attractive layouts for menus and posters.
+
+Educational Content: Designing professional book covers for technical documentation, such as my network engineering guide 'Zero to Hero'."
