@@ -9,6 +9,7 @@
     <script src="https://unpkg.com/typed.js@2.0.15/dist/typed.umd.js"></script>
 </head>
 <body>
+<div id="menu-backdrop" onclick="closemenu()"></div>
 <div id="header">
     <div class="container">
          <nav>
@@ -21,7 +22,7 @@
                 <li><a href="#contact">Contact</a></li>
                 <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
             </ul>
-            <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+            <i class="fa-solid fa-bars" onclick="openmenu()" id="hamburger-btn"></i>
          </nav>
         <section class="home">
             <div class="home-content">
@@ -267,10 +268,10 @@
                 <div class="social-icons">
                     <a href="https://www.facebook.com/share/1Bk6voJaW7/"><i class="fa-brands fa-facebook"></i></a>
                     <a href="https://www.instagram.com/masadianr?igsh=MXRmaXg4bGxuZWI5YQ=="><i class="fa-brands fa-x-twitter"></i></a>
-                    <a href="https://www.instagram.com/masadianr?igsh=MXRmaXg4bGxuZWI5YQ=="><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://x.com/Trasyeu?s=09"><i class="fa-brands fa-instagram"></i></a>
                     <a href="https://www.linkedin.com/in/adianr?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><i class="fa-brands fa-linkedin"></i></a>
                 </div>
-                <a href="gambar9CV.pdf" download class="btn btn2">Download CV</a>
+                <a href="gambar9cv.pdf" download class="btn btn2">Download CV</a>
             </div>
             <div class="contact-right">
                 <form name="submit-to-google-sheet">
@@ -306,16 +307,33 @@ function opentab(tabname){
 </script>
 
 <script>
-
     var sidemenu = document.getElementById("sidemenu");
+    var backdrop = document.getElementById("menu-backdrop"); // Kalau pakai backdrop
+    var hamburger = document.getElementById("hamburger-btn"); // Ambil tombol bar
 
     function openmenu(){
         sidemenu.style.right = "0";
-    }
-     function closemenu(){
-        sidemenu.style.right = "-150px";
+        if(backdrop) backdrop.classList.add("show"); // Munculkan backdrop (jika ada)
+        
+        // SEMBUNYIKAN TOMBOL BAR SAAT MENU BUKA
+        hamburger.style.display = "none";
     }
 
+    function closemenu(){
+        sidemenu.style.right = "-250px"; // Sesuaikan dengan width css kamu
+        if(backdrop) backdrop.classList.remove("show"); // Sembunyikan backdrop (jika ada)
+        
+        // MUNCULKAN TOMBOL BAR SAAT MENU TUTUP
+        hamburger.style.display = "block";
+    }
+
+    // Otomatis tutup saat link diklik
+    var menuItems = document.querySelectorAll("#sidemenu li a");
+    menuItems.forEach(function(item) {
+        item.addEventListener("click", function() {
+            closemenu();
+        });
+    });
 </script>
 <script>
   const scriptURL = 'https://script.google.com/macros/s/AKfycbyBlMc73kYdqAJNjsBco1EPlfzsvnQ-CgRyHPvl54IeY1L6z6IsRra7wJyuiRImqg/exec'
